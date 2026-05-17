@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>深度分析中... | Archetype Nexus</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <canvas id="bg-canvas"></canvas>
+    <div class="scanlines"></div>
+
+    <div class="container analyzing-container">
+        <h2 class="analyzing-title">NEURAL DECONSTRUCTION</h2>
+
+        <!-- 环形进度 -->
+        <div class="scanner-ring">
+            <svg width="200" height="200" viewBox="0 0 200 200">
+                <circle class="bg-circle" cx="100" cy="100" r="90"></circle>
+                <circle class="progress-circle" id="progress-circle" cx="100" cy="100" r="90"></circle>
+            </svg>
+            <div class="scanner-center" id="scan-percent">0%</div>
+        </div>
+
+        <!-- 数据网格 -->
+        <div class="analysis-grid" id="analysis-grid">
+            <!-- JS 动态生成 -->
+        </div>
+
+        <!-- 终端日志 -->
+        <div class="terminal-log" id="terminal-log">
+            <!-- JS 动态生成 -->
+        </div>
+    </div>
+
+    <script src="js/background.js"></script>
+    <script src="js/analyzing.js"></script>
+</body>
+</html>
