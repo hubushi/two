@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>人格扫描中... | Archetype Nexus</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <canvas id="bg-canvas"></canvas>
+    <div class="scanlines"></div>
+
+    <div class="container quiz-container">
+        <!-- 顶部扫描信息 -->
+        <div class="scan-header">
+            <div class="scan-id">
+                <span class="label">SUBJECT_ID:</span>
+                <span class="value" id="subject-id">ANX-████-██</span>
+                <span class="typing-dot"></span>
+            </div>
+            <div class="scan-progress">
+                <div class="progress-track">
+                    <div class="progress-fill" id="progress-fill"></div>
+                </div>
+                <span class="progress-text" id="progress-text">0 / 8</span>
+            </div>
+        </div>
+
+        <!-- 问题区域 -->
+        <main class="quiz-main">
+            <div class="question-card" id="question-card">
+                <div class="question-number">
+                    <span class="current" id="q-current">01</span>
+                    <span class="divider">/</span>
+                    <span class="total">08</span>
+                </div>
+                
+                <h2 class="question-text" id="question-text"></h2>
+                
+                <div class="options" id="options">
+                    <!-- 选项由JS生成 -->
+                </div>
+            </div>
+
+            <!-- 脑波监测装饰 -->
+            <div class="brainwave-monitor">
+                <div class="monitor-label">NEURAL_ACTIVITY_MONITOR</div>
+                <canvas id="wave-canvas" width="300" height="60"></canvas>
+                <div class="monitor-stats">
+                    <span>α波: <span id="alpha-wave">--</span></span>
+                    <span>β波: <span id="beta-wave">--</span></span>
+                    <span>γ波: <span id="gamma-wave">--</span></span>
+                </div>
+            </div>
+        </main>
+
+        <!-- 底部日志 -->
+        <div class="system-log" id="system-log">
+            > 神经接口已建立... 等待认知输入
+        </div>
+    </div>
+
+    <script src="js/background.js"></script>
+    <script src="js/quiz.js"></script>
+</body>
+</html>

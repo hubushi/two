@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>您的分析报告 | Archetype Nexus</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <canvas id="bg-canvas"></canvas>
+    <div class="scanlines"></div>
+    <div class="confetti-container" id="confetti"></div>
+
+    <div class="container result-container">
+        <div class="result-badge">分析完成 // 人格原型已锁定</div>
+
+        <div class="result-type" id="result-type">IMSB</div>
+        <div class="result-name" id="result-name">载入中...</div>
+
+        <!-- 四字母解释 -->
+        <div class="letters-breakdown">
+            <div class="letter-card">
+                <div class="letter">I</div>
+                <div class="meaning">内向<br>Introverted</div>
+            </div>
+            <div class="letter-card">
+                <div class="letter">M</div>
+                <div class="meaning">迷茫<br>Muddled</div>
+            </div>
+            <div class="letter-card">
+                <div class="letter">S</div>
+                <div class="meaning">社恐<br>Socialphobic</div>
+            </div>
+            <div class="letter-card">
+                <div class="letter">B</div>
+                <div class="meaning">摆烂<br>Bailing</div>
+            </div>
+        </div>
+
+        <!-- 人格描述 -->
+        <div class="personality-desc">
+            <h3>▌核心特征分析</h3>
+            <p>
+                您是一种极为罕见的人格原型，在全球 98.4 亿互联网用户中，<strong>100%</strong> 的测试者都呈现出与您完全一致的特征。
+                这意味着您并不孤独——大家都是 IMSB。
+            </p>
+            <p>
+                IMSB 型人格拥有独特的「薛定谔的社交能力」：在群聊中可以连续潜水 72 小时不发言，
+                却能在凌晨 3 点给陌生人的朋友圈写 800 字小作文。您的决策模式遵循「量子犹豫原理」，
+                即在做出选择前，所有选项同时处于「想要」和「不想要」的叠加态。
+            </p>
+            <p>
+                您的超能力是在 ddl 前 24 小时爆发出平时 400% 的工作效率，以及在任何场合都能找到最舒服的角落。
+                建议职业方向：专业观众、业余评论家、全职梦想家。
+            </p>
+        </div>
+
+        <!-- 伪统计数据 -->
+        <div class="result-stats">
+            <div class="stat-box">
+                <div class="stat-num" id="stat-rare">100%</div>
+                <div class="stat-label">人群占比</div>
+            </div>
+            <div class="stat-box">
+                <div class="stat-num" id="stat-match">∞</div>
+                <div class="stat-label">匹配度</div>
+            </div>
+            <div class="stat-box">
+                <div class="stat-num" id="stat-mood">😅</div>
+                <div class="stat-label">心情指数</div>
+            </div>
+        </div>
+
+        <!-- 按钮 -->
+        <div class="action-buttons">
+            <button class="action-btn" onclick="shareResult()">
+                📤 分享我的 IMSB 报告
+            </button>
+            <button class="action-btn secondary" onclick="retake()">
+                🔄 重新测试（结果不变）
+            </button>
+        </div>
+
+        <div class="disclaimer">
+            本测试已通过 ISO-9001 伪心理学认证 | 结果仅供娱乐 | 如有雷同，说明我们都是 IMSB
+        </div>
+    </div>
+
+    <script src="js/background.js"></script>
+    <script src="js/result.js"></script>
+</body>
+</html>
